@@ -1,7 +1,7 @@
 {
   "name": "enzyme-shallow-until",
   "version": "1.0.0",
-  "description": "enzyme-shallow-until React component",
+  "description": "enzyme-shallow-until react test util",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -23,6 +23,8 @@
     "react": "16.x"
   },
   "devDependencies": {
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
     "nwb": "0.20.x",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
