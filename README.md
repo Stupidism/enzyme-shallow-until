@@ -9,9 +9,12 @@
 [![Known Vulnerabilities][snyk-badge]][snyk]
 
 `enzyme-shallow-until` is a utility library to extend enzyme's shallow function.
+It gives ShallowWrapper the ability to dive until a specific component type.
+Especially useful when you have some HOC-style components to test.
 
 ## Setup
 - install
+
 `npm i -D enzyme enzyme-shallow-until enzyme-adapter-react-xx`
 
 - setup `ShallowWrapper`
@@ -27,6 +30,21 @@ ShallowWrapper.prototype.until = until;
 ## Usage
 ```
 const wrapper = shallow(<ComposedComponent />).until(Component);
+```
+
+### Use with jest snapshot and enzyme-to-json
+```js
+// in test-setup.js
+import { createSerializer } from 'enzyme-to-json';
+expect.addSnapshotSerializer(createSerializer({ mode: 'deep' }));
+```
+
+```js
+// in xxx.test.js
+it('should keep render result unchanged', () => {
+  const wrapper = shallow(<ComposedComponent />).until(Component);
+  expect(wrapper).toMatchSnapshot();
+})
 ```
 
 ## Thanks
