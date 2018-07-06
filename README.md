@@ -19,8 +19,9 @@ Especially useful when you have some HOC-style components to test.
 
 - setup `ShallowWrapper`
 ```
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-xx';
+import until from 'enzyme-shallow-until';
 import ShallowWrapper from 'enzyme/ShallowWrapper';
 
 Enzyme.configure({ adapter: new Adapter() });
