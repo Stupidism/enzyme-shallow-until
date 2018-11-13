@@ -27,7 +27,7 @@
     "enzyme-adapter-react-16": "^1.1.0",
     "nwb": "~0.21.0",
     "react": "^16.6.2",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.6.2"
   },
   "author": "",
   "homepage": "",
